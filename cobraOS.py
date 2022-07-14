@@ -3,7 +3,7 @@
 import math
 import random
 from time import time
-version = "3.1"
+version = "3.2"
 #gets edited with clear_Array,see_array and array
 array1 = []
 passwords = ["1971","2022"]
@@ -99,7 +99,7 @@ while True:
         
         lastcommand = "clear_array"
     #views the version of the OS
-    if(command == "CobraOS"):
+    if(command == "version"):
         print("version",version)
         
         lastcommand = "CobraOS"

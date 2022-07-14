@@ -1,3 +1,7 @@
+#/usr/local/bin/python3
+
+
+
 import math
 import random
 version = "3.0"

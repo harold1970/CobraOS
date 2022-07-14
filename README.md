@@ -2,7 +2,7 @@
 A OS that I made using python 3.0
 commands
 help: view all commands
-print("shutdown: shutdown OS
+shutdown: shutdown OS
 math: adds to numbers together
 pi_100: view the first 100 digits of pi
 see_array: view the list

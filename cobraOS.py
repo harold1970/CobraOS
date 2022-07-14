@@ -3,7 +3,7 @@
 import math
 import random
 from time import time
-version = "3.2"
+version = "3.3"
 #gets edited with clear_Array,see_array and array
 array1 = []
 passwords = ["1971","2022"]
@@ -14,6 +14,7 @@ user_name = input()
 print("hello",user_name)
 
 while True:
+
     command = input("please input command:")
     
     if(command == "+"):
@@ -24,7 +25,7 @@ while True:
         math2 = float(input())
         
         print(math1 + math2)
-            
+  
     if(command == "/"):
         print("first number")
         math1 = float(input())
@@ -33,7 +34,7 @@ while True:
         math2 = float(input())
         
         print(math1 / math2)
-    
+
     if(command == "*"):
         print("first number")
         math1 = float(input())
@@ -51,6 +52,7 @@ while True:
         math2 = float(input())
         
         print(math1 - math2)
+
         
             
     
@@ -58,20 +60,20 @@ while True:
     if(command == "shutdown"):
         print("exiting...")
         exit()
-    #Add two numbers
+
     
     #shows the first 100 digits of pi
     if(command == "pi_100"):
         print("3.1415926535 8979323846 2643383279 5028841971 6939937510 5820974944 5923078164 0628620899 8628034825 3421170679")
-        
+   
     #add something to the array
     if(command == "array"):
         array1.append(input("add something:"))
-        
+  
     #see the array
     if(command == "see_array"):
         print(array1)
-        
+  
     #view all commands
     if(command == "help"):
         print("help: view all commands")
@@ -92,32 +94,33 @@ while True:
         print("admin: allows admin control")
         print("passwords: see passwords and or add passwords")
         print("logout: leaves admin account but does not shutdown the OS")    
-    
+
     #empty the array
     if(command == "clear_array"):
         array1.clear()
-        
-        lastcommand = "clear_array"
+
     #views the version of the OS
     if(command == "version"):
         print("version",version)
         
         lastcommand = "CobraOS"
+
+    
     #random number 0,100
     if(command == "random"):
-        dice = random.randint(0,100)
+        high = int(input("how high do you want it to go?:"))
+        dice = random.randint(0,high)
         print(dice)
         
         lastcommand = "random"
-    
+
     if(command == "admin"):
         adminpass = input("please input the password:")
         if adminpass in passwords:
             print("correct!")
             admin = True
-        else:
-            print("wrong password")
-    
+
+   
     if(command == "passwords"):
         if(admin == True):
             print(passwords)
@@ -134,8 +137,8 @@ while True:
             admin = False 
         else:
             print("you are not logged in to admin")
-        
-            
+    
+
         
         
 

@@ -1,10 +1,9 @@
-#/usr/local/bin/python3
-
-
+#!/usr/local/bin/python3
 
 import math
 import random
-version = "3.0"
+from time import time
+version = "3.1"
 #gets edited with clear_Array,see_array and array
 array1 = []
 passwords = ["1971","2022"]
@@ -15,22 +14,52 @@ user_name = input()
 print("hello",user_name)
 
 while True:
-
     command = input("please input command:")
+    
+    if(command == "+"):
+        print("first number")
+        math1 = float(input())
+        
+        print("second number")
+        math2 = float(input())
+        
+        print(math1 + math2)
+            
+    if(command == "/"):
+        print("first number")
+        math1 = float(input())
+        
+        print("second number")
+        math2 = float(input())
+        
+        print(math1 / math2)
+    
+    if(command == "*"):
+        print("first number")
+        math1 = float(input())
+        
+        print("second number")
+        math2 = float(input())
+        
+        print(math1 * math2)
+
+    if(command == "-"):
+        print("first number")
+        math1 = float(input())
+        
+        print("second number")
+        math2 = float(input())
+        
+        print(math1 - math2)
+        
+            
+    
     #shutdown the OS
     if(command == "shutdown"):
         print("exiting...")
         exit()
     #Add two numbers
-    if(command == "math"):
-        print("this")
-        math1 = float(input())
-        print("plus this") 
-        math2 = float(input())
-        print("equal this")
-        print(math1 + math2)
-        
-        lastcommand = "math"
+    
     #shows the first 100 digits of pi
     if(command == "pi_100"):
         print("3.1415926535 8979323846 2643383279 5028841971 6939937510 5820974944 5923078164 0628620899 8628034825 3421170679")
@@ -46,8 +75,15 @@ while True:
     #view all commands
     if(command == "help"):
         print("help: view all commands")
+        
         print("shutdown: shutdown OS")
-        print("math: adds to numbers together")
+        #the math operaters
+        print("*: multiply two numbers")
+        print("-: subtract two numbers")
+        print("+: add two numbers")
+        print("/: divide two numbers")
+        
+
         print("pi_100: view the first 100 digits of pi")
         print("see_array: view the list")
         print("array: add something to the list")
@@ -88,7 +124,7 @@ while True:
             print("do you want to add a password for accsessing the admin powers?")
             YN = input("y or n:")
             if(YN == "y"):
-                array1.append(input("add a password:"))
+                passwords.append(input("add a password:"))
         else:
             print("you need admin control")
     
@@ -96,6 +132,10 @@ while True:
         YN = input("y or n:")
         if(YN == "y"):
             admin = False 
+        else:
+            print("you are not logged in to admin")
+        
+            
         
         
 

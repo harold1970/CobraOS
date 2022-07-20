@@ -13,4 +13,5 @@ commands
 * admin: allows admin control,
 * passwords: see passwords and or add passwords,
 * logout: leaves admin account but does not shutdown the OS,
+* browser: (indev) allows you to open a webpage. the websites are www.docs.com and www.doc_viewer.com
 

@@ -1,9 +1,17 @@
 #!/usr/local/bin/python3
-
-import math
+        # Import smtplib for the actual sending function
+import http
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+import smtplib
+from email.message import EmailMessage
+# Import the email modules we'll need
+import webbrowser
 import random
-from time import time
-version = "3.3"
+
+
+version = "4.0"
 #gets edited with clear_Array,see_array and array
 array1 = []
 passwords = ["1971","2022"]
@@ -94,7 +102,7 @@ while True:
         print("admin: allows admin control")
         print("passwords: see passwords and or add passwords")
         print("logout: leaves admin account but does not shutdown the OS")    
-
+        print("browser: opens a website(in dev), www.docs.com, www.doc_viewer.com")
     #empty the array
     if(command == "clear_array"):
         array1.clear()
@@ -139,8 +147,24 @@ while True:
             print("you are not logged in to admin")
     
 
-        
-        
-
-
+    
+    if(command == "browser"):
+        www = input("please input a web address:")
+        if(www == "www.docs.com"):
+            
+            dname = input("name:")
+            body = input()
+            docs = [dname,body]
+            print("continue browsing?")
+            YN = input("y/n:")
+            if(YN == "y"):
+                www = input("please input a web address:")
+            else:
+                pass      
+        if(www == "www.doc_viewer.com"):
+            print(docs)
+            if(YN == "y"):
+                www = input("please input a web address:")
+            else:
+                pass
     

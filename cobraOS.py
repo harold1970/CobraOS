@@ -1,9 +1,12 @@
 #!/usr/local/bin/python3
 
 import math
+from multiprocessing import cpu_count
+from multiprocessing.dummy import Array
+import os
 import random
 from time import time
-version = "3.3"
+version = "3.4"
 #gets edited with clear_Array,see_array and array
 array1 = []
 passwords = ["1971","2022"]
@@ -95,6 +98,13 @@ while True:
         print("passwords: see passwords and or add passwords")
         print("logout: leaves admin account but does not shutdown the OS")    
 
+        print("new_array: creates a new array")
+        print("edit_new+: add something to the array")
+        print("edit_new-: removes something from the new array")
+        print("view_array_new: views the array")
+
+        print("next_update: see the next update")
+    
     #empty the array
     if(command == "clear_array"):
         array1.clear()
@@ -135,12 +145,30 @@ while True:
         YN = input("y or n:")
         if(YN == "y"):
             admin = False 
-        else:
-            print("you are not logged in to admin")
     
-
-        
-        
-
-
+    if(command == "cpu"):
+        print(cpu_count())  
     
+    if(command == "new_array"):
+        if(admin == True):
+            name = input("name your array:")
+            
+            print("your new array is called:",name)
+            name = []
+        
+    if(command == "edit_new+"):
+        if(admin == True):   
+            name.append(input("add something:"))
+        
+    
+    if(command == "edit_new-"):
+        if(admin == True): 
+            delete = input("please input the name of the item you want to remove:")
+            name.remove(delete)
+
+    if(command == "view_array_new"):
+        if(command == True):    
+            print(name)
+    
+    if(command == "next_update"):
+        print("the next update will allow you to email people and you can check you inbox")

@@ -4,7 +4,10 @@ commands
 
 * help: view all commands,
 * shutdown: shutdown OS,
-* math: adds to numbers together,
+* +: add two numbers
+* -: subtracts two numbers
+* *: multiply two numbers
+* /: divide two numbers
 * pi_100: view the first 100 digits of pi,
 * see_array: view the list,
 * array: add something to the list,

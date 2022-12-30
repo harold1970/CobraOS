@@ -4,7 +4,10 @@ commands
 
 * help: view all commands,
 * shutdown: shutdown OS,
-* math: adds to numbers together,
+* *: multiply two numbers
+* /: divide two numbers
+* +: adds two numbers
+* -: subtract two numbers
 * pi_100: view the first 100 digits of pi,
 * see_array: view the list,
 * array: add something to the list,
@@ -13,4 +16,8 @@ commands
 * admin: allows admin control,
 * passwords: see passwords and or add passwords,
 * logout: leaves admin account but does not shutdown the OS,
+* 
+* 
+* 
+* 
 

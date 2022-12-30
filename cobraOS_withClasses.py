@@ -11,8 +11,8 @@ print("please input user name")
 global user_name
 user_name = input()
 
-#######
-# Dad's sample code:
+
+
 # print(f"Comm")
 class Command:
     def __init__(self, commands):
@@ -190,18 +190,8 @@ Restart(commands)
 
 
 
-
-
-# a = RandomWord(commands)
-# b = RandomWord(commands)
-# print(a.words)
-# # output: default words...
-# print(b.words)
-# # output: default words...
-# a.words = ["dad","hacked","my", "os"]
-# print(a.words)
-# print(b.words)
-# # output: default words...
+#######
+# Dad's sample code:
 
 while True:
     command = input(f"{user_name}/cobraOS|--> ")

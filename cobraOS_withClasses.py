@@ -190,8 +190,6 @@ Restart(commands)
 
 
 
-#######
-# Dad's sample code:
 
 while True:
     command = input(f"{user_name}/cobraOS|--> ")
@@ -206,5 +204,4 @@ while True:
     args = instance.get_input()
     instance.call(*args) # .call(args[0], args[1])
     
-# end sample code
-#######
+
